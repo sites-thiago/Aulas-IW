@@ -1,0 +1,455 @@
+	*{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	body {
+		font-family: Bahnschrift;
+		color: #001D49;
+		background-color: #FFFAFA;
+	}
+
+	html {
+		scroll-behavior: smooth;
+	}
+
+	header{
+	}
+
+	nav {
+		position: relative;
+    	background: #13293D;
+  		padding: 0;
+    	color: #fff;
+    	overflow: hidden;
+    	display: flex;
+    	flex-direction: column;
+    	align-items: center;
+	}
+
+	nav ul{
+		float: right;
+		list-style: none;
+	}
+
+	nav ul li {
+		display: inline-block;
+		line-height: 50px;
+		margin: 0 15px; 
+	}
+
+	nav ul li a{
+		position: relative;
+		padding: 10px 8px;
+		color: #ffffff;
+		font-size: 20px;
+		text-decoration: none;
+	}
+
+	nav a:hover {
+		background: #E8F1F2;
+		color: #13293D;
+		transition: 0.5s;
+	}
+
+
+	h1 {
+		position: relative;
+		padding: 5px 0;
+		color: #fff;
+		font-size: 18px;
+		text-decoration: none;
+	}
+
+	footer {
+		position: relative;
+    	background: #13293D;
+  		padding: 10px;
+  		width: 100%;
+  		height: 80px;
+    	color: #fff;
+    	overflow: hidden;
+    	display: flex;
+    	flex-direction: column;
+	}
+
+	footer h1 {
+		position: absolute;
+		width: 20%;
+		top: 50;
+		bottom: 20%;
+		font-size: 20px;
+		margin-left: 50%;
+
+	}
+	
+	.banner {
+		position: relative;
+		width: 100%;
+		height: 100vh;
+		background: #3475ca;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	
+	.banner img{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		opacity: 0.6;
+	}
+
+	.banner .content {
+		position: relative;
+		max-width: 750px;
+		text-align: center;
+	}
+
+	.banner .content h2 {
+		color: #fff;
+		font-size: 60px;
+
+	}
+
+	.receitas{
+		position: relative;
+		width: 100%;
+		display: flex;
+	}
+
+	.receitas .contentrec {
+		background: #162c3b;
+		padding: 50px;
+		padding-right: 300px;
+		padding-left: 300px;
+		width: 100%;
+		color: #ffffff;
+		align-items: center;
+		text-align: center;
+	}
+
+	.heading {
+		color: #fff;
+		font-size: 30px; 
+		font-weight: 600;
+		letter-spacing: 1px;
+		margin-bottom: 10px;
+	}
+
+	.texto {
+		color: #fff;
+		font-size: 16px;
+		font-weight: 300;
+		letter-spacing: 1px;
+	}
+
+	.part3 {
+		padding: 50px;
+		margin: 50px auto;
+		max-width: 1100px;
+	}
+
+	.stick{
+		position: -webkit-sticky;
+  		position: sticky;
+  		top: 0;
+  		right: 0;
+  		left: 0;
+  		z-index: 1030;
+  	}
+
+  	.menu-opcoes{
+  		text-align: center;
+  	}
+
+
+  	#checkbox-menu {
+  		position: absolute;
+  		opacity: 0;
+  	}
+
+  	.hamburguer {
+  		cursor: pointer;
+  		position: relative;
+  		display: none;
+  		height: 22px;
+  		width: 30px;
+  	}
+
+  	.hamburguer span {
+  		position: absolute;
+  		display: flex;
+  		height: 5px;
+  		width: 100%;
+  		border-radius: 30px;
+  		background: #fff;
+  		transition: 0.25s ease-in-out;
+
+  	}
+
+  	.hamburguer span:nth-child(1){
+  		top: 0;
+  	}
+
+  	.hamburguer span:nth-child(2){
+  		top: 8px;
+  	}
+
+  	.hamburguer span:nth-child(3){
+  		top: 16px;
+  	}
+
+  	#checkbox-menu:checked + label span:nth-child(1) {
+  		transform: rotate(-45deg);
+  		top: 8px;
+  	}
+
+  	#checkbox-menu:checked + label span:nth-child(2) {
+  		opacity: 0;
+  	}
+
+  	#checkbox-menu:checked + label span:nth-child(3) {
+  		transform: rotate(45deg);
+  		top: 8px;
+  	}
+
+  	.galeria {
+  		display: flex;
+  		flex-wrap: wrap;
+  		flex-direction: row;
+  		margin: 70px auto 0;
+  	}
+
+  	.galeria .imagem{
+  		position: relative;
+  		color: #fff;
+  		padding: 7px;
+  		width: calc(100% / 4);
+  		box-sizing: border-box;
+  		display: inline-block;
+  	}
+
+  	.galeria .imagem img {
+  		width: 100%;
+  		vertical-align: middle;
+  		transition: all 0.3s ease;
+  	}
+
+  	.galeria .imagem span {
+  		display: flex;
+  		width: 100%;
+  		position: relative;
+  	}
+
+  	.galeria .imagem:hover img {
+  		transform: scale(1.1);
+  	}
+
+  	.galeria .imagem .datalhes {
+  		position: absolute;
+  		top: 10px;
+  		left: 10px;
+  		bottom: 10px;
+  		right: 10px;
+  		background: rgba(0,0,0, .8);
+  		transform: scaleY(0);
+  		transition: transform .5s;
+  		letter-spacing: 1px;
+  	}
+
+  	.galeria .imagem:hover .datalhes {
+  		transform: scaleY(1);
+  	}
+
+  	.galeria .imagem .datalhes a {
+  		text-decoration: none;
+  		color: #ff0;
+  	}
+
+  	.galeria .imagem .datalhes .content2 {
+  		position: absolute;
+  		top: 50%;
+  		transform: translateY(-50%);
+  		text-align: center;
+  		padding: 15px;
+  		color: #fff;
+  	}
+
+  	.galeria .imagem .datalhes .content2 h2 {
+  		margin: 0;
+		padding: 0;
+		font-size: 20px;
+		color: #ff0;	
+	}
+
+	.galeria .imagem .datalhes .content2 p {
+		margin: 10px 0 0;
+		padding: 0;
+	}
+
+  	.titulo {
+		color: #011C40;
+		font-size: 30px; 
+		font-weight: 600;
+		letter-spacing: 1px;
+		margin-bottom: 10px;
+		text-align: center;
+	}
+
+	.container .box{
+		position: relative;
+		width: 300px;
+		height: 300px;
+		background: #ff0;
+		margin: 10px;
+		box-sizing: border-box;
+		display: inline-block;
+	}	
+
+  	@media screen and (max-width: 1000px){
+		.galeria .imagem{
+  			width: calc(100% / 3);
+  		}  		
+  	}
+
+  	@media screen and (max-width: 800px){
+		.galeria .imagem{
+  			width: calc(100% / 2);
+  		}  		
+  	}
+
+  	@media screen and (max-width: 676px){
+
+		nav {
+			display: block;
+		}
+
+		ul {
+			position: fixed;
+			width: 100%;
+			height: 100vh;
+			background: #0477BF;
+			left: -100%;
+			padding-top: 30px;
+			text-align: center;
+			transition: all .5s ease-in-out;
+		}
+
+		nav ul li {
+			display: block;
+		}
+
+		nav ul li a{
+			font-size: 20px; 
+		}
+
+		a:hover {
+			background: none;
+			color: #E8F1F2;
+			transition: 0.5s;
+		}
+
+		#checkbox-menu:checked ~ ul {
+			left: 0;
+		}
+
+		.hamburguer {
+			display: block;
+			position: absolute;
+			top: 40%;
+			right: 5%;
+		}
+
+
+		#checkbox-menu:checked + label span:nth-child(1) {
+  			transform: rotate(-45deg);
+  			top: 8px;
+  		}
+
+  		#checkbox-menu:checked + label span:nth-child(2) {
+  			opacity: 0;
+  		}
+
+  		#checkbox-menu:checked + label span:nth-child(3) {
+  			transform: rotate(45deg);
+  			top: 8px;
+  		}
+
+  		#checkbox-menu {
+  			top: 40%;
+  			right: 5%;
+  		}
+
+  		.receitas .contentrec{
+  			width: 100%;
+  		}
+
+  		.galeria .imagem{
+  		width: calc(100% / 1);
+  		padding: 10px;
+  		}
+
+  		.receitas .contentrec {
+  			padding-right: 30px;
+  			padding-left: 30px;
+  		}
+	}
+
+	@media screen and (min-width: 677px) {
+
+		nav {
+			flex-direction: row;
+			position: relative;
+			justify-content: space-between;
+			padding: 0 20px;
+		}
+
+		.menu-opcoes ul li {
+			display: inline;
+			margin-left: 10px;
+		}
+
+		.hamburger span {
+			display: none;
+		}
+	}
+
+
+/* comandos rascunho 
+	nav {
+		height: 50px;
+		background: #13293D;
+		overflow: hidden;
+	}
+
+	nav ul{
+		float: right;
+		margin-right: 25px;
+		list-style: none;
+	}
+
+	nav ul li {
+		display: block;
+		line-height: 50px;
+		margin: 0 15px;
+	}
+
+	nav ul li a {
+		position: relative;
+		padding: 10px 8px;
+		color: #ffffff;
+		font-size: 18px;
+		text-decoration: none;
+	}
+
+	nav a:hover {
+		background: #E8F1F2;
+		color: #13293D;
+	} 
+
+	*/
