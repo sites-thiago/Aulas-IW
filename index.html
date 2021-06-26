@@ -4,6 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Culinária Online</title>
   	<link rel="shortcut icon" href="img/culinaria_online(favicon).png">
  	<link rel="stylesheet" type="text/css" href="css/reset.css">
@@ -21,10 +22,10 @@
 				<span></span>
 			</label>
 			<ul>
-				<li><a href="#">Home</a></li>
-				<li><a href="#">Receitas</a></li>
-				<li><a href="#">Sobre</a></li>
-				<li><a href="#">Contato</a></li>
+				<li><a href="" class="ativado">Home</a></li>
+				<li><a href="#sobre">Sobre</a></li>
+				<li><a href="#receitas">Receitas</a></li>
+				<li><a href="contato.html">Contato</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -40,14 +41,30 @@
 			<p class="texto"> Aprenda a fazer receitas maravilhosas aqui no nosso website! Você pode aprender a fazer de tudo, bebidas, sobremesas e muito mais! Nossas receitas combinam para um almoço ou jantar em família, para agradar a sogra no final de semana e para todas as ocasiões!<br><br> As receitas são todas caseiras, a maioria delas não requer muito esforço ou especialidade na cozinha, são receitas rápidas, práticas e muito deliciosas.</p>
 		</div>
 	</section>
-	<section class="part3">
+
+	<h2 class="titulo2">Sobre</h2>
+	<section id="sobre">
+		<div class="sobre">
+			<img src="img/reloginho.png">
+			<h2>Receitas rápidas</h2>
+			<p>Com a correria de cada dia nem sempre temos muito tempo para fazer alguma coisa gostosa para comer, por sorte, aqui no nosso site temos receitas deliciosas e bem rapidinhas para fazer! Não requerem muitas coisas e bem práticas para te deixar satisfeito!</p>
+		</div>
+		<div class="sobre"></div>
+		<div class="sobre">
+			<img src="img/avental.png" class="pading">
+			<h2>Receitas caseiras</h2>
+			<p>Bem agradáveis e deliciosas, muitas receitas tem o gostinho de comida de vó, e você encontra elas aqui! Todas são caseiras e muito gostosas! E lembre-se, para fazer um belo prato, não precisa de experiência na cozinha, é só seguir o passo a passo e aproveitar depois!</p>
+		</div>
+	</section>
+
+	<section class="part3" id="receitas">
 		<h2 class="titulo">Delicie-se</h2>
 		<div class="galeria">
 			<div class="imagem"><span><img src="img/caipirinha.png"></span> 
 				<div class="datalhes">
 					<div class="content2">
 						<h2>Caipirinha</h2>
-						<p>Quer aprender a fazer caipirinha? <a href="">Clique aqui</a></p>
+						<p>Quer aprender a fazer caipirinha? <a data-tab-target="#caipirinha">Clique aqui</a></p>
 					</div>
 				</div>
 			</div>
@@ -55,7 +72,7 @@
 				<div class="datalhes">
 					<div class="content2">
 						<h2>Bolinho de chuva</h2>
-						<p>Quer aprender a fazer bolinho de chuva? <a href="">Clique aqui</a></p>
+						<p>Quer aprender a fazer bolinho de chuva? <a data-tab-target="#bolinhochuva">Clique aqui</a></p>
 					</div>
 				</div>
 			</div>
@@ -63,7 +80,7 @@
 				<div class="datalhes">
 					<div class="content2">
 						<h2>Prestígio de travessa</h2>
-						<p>Quer aprender a fazer prestígio de travessa? <a href="">Clique aqui</a></p>
+						<p>Quer aprender a fazer prestígio de travessa? <a data-tab-target="#docechoco">Clique aqui</a></p>
 					</div>
 				</div>
 			</div>
@@ -71,7 +88,7 @@
 				<div class="datalhes">
 					<div class="content2">
 						<h2>Cuscuz paulista</h2>
-						<p>Quer aprender a fazer cuscuz paulista? <a href="">Clique aqui</a></p>
+						<p>Quer aprender a fazer cuscuz paulista? <a data-tab-target="#cuscuzpaulista">Clique aqui</a></p>
 					</div>
 				</div>
 			</div>
@@ -79,7 +96,7 @@
 				<div class="datalhes">
 					<div class="content2">
 						<h2>Doce de coco</h2>
-						<p>Quer aprender a fazer quer fazer doce de coco? <a href="">Clique aqui</a></p>
+						<p>Quer aprender a fazer quer fazer doce de coco? <a data-tab-target="#docecoco">Clique aqui</a></p>
 					</div>
 				</div>
 			</div>
@@ -87,7 +104,7 @@
 				<div class="datalhes">
 					<div class="content2">
 						<h2>Batata recheada</h2>
-						<p>Quer aprender a fazer batata recheada? <a href="">Clique aqui</a></p>
+						<p>Quer aprender a fazer batata recheada? <a data-tab-target="#batatarecheada">Clique aqui</a></p>
 					</div>
 				</div>
 			</div>
@@ -95,25 +112,154 @@
 				<div class="datalhes">
 					<div class="content2">
 						<h2>Brócolis gratinado</h2>
-						<p>Quer aprender a fazer brócolis gratinado? <a href="">Clique aqui</a></p>
+						<p>Quer aprender a fazer brócolis gratinado? <a data-tab-target="#brocolisgratinado">Clique aqui</a></p>
 					</div>
 				</div>
 			</div>
 			<div class="imagem"><span><img src="img/lasanha.png"></span>
 				<div class="datalhes">
 					<div class="content2">
-						<h2>Panqueca recehada</h2>
-						<p>Quer aprender a fazer panqueca recheada? <a href="">Clique aqui</a></p>
+						<h2>Panqueca recheada</h2>
+						<p>Quer aprender a fazer panqueca recheada? <a data-tab-target="#panquecarecheada">Clique aqui</a></p>
 					</div>
 				</div>
 			</div>
+		</div>
+
+		<div class="pag-visu" id="caipirinha" data-tab-content>
+		<div class="detalhes">
+			<span class="title"><img src="img/culinaria_online(favicon).png"><h2>Vamos ver o que precisa para essa receita</h2></span>
+			<input type="checkbox" id="checkbox-X">
+				<label for="checkbox-X" class="xzinho">
+					<span></span>
+					<span></span>
+				</label>
+		</div>
+		<div class="caixa-conteudo">
+			<p> Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla BlaBla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla blaBla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla</p>
+		</div>
+		</div>
+		<div class="pag-visu" id="bolinhochuva" data-tab-content>
+		<div class="detalhes">
+			<span class="title"><img src="img/culinaria_online(favicon).png"><h2>Vamos ver o que precisa para essa receita</h2></span>
+			<input type="checkbox" id="checkbox-X">
+				<label for="checkbox-X" class="xzinho">
+					<span></span>
+					<span></span>
+				</label>
+		</div>
+		<div class="caixa-conteudo">
+			<p> Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla</p>
+		</div>
+		</div>
+		<div class="pag-visu" id="docechoco" data-tab-content>
+		<div class="detalhes">
+			<span class="title"><img src="img/culinaria_online(favicon).png"><h2>Vamos ver o que precisa para essa receita</h2></span>
+			<input type="checkbox" id="checkbox-X">
+				<label for="checkbox-X" class="xzinho">
+					<span></span>
+					<span></span>
+				</label>
+		</div>
+		<div class="caixa-conteudo">
+			<p> Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla</p>
+		</div>
+		</div>
+		<div class="pag-visu" id="cuscuzpaulista" data-tab-content>
+		<div class="detalhes">
+			<span class="title"><img src="img/culinaria_online(favicon).png"><h2>Vamos ver o que precisa para essa receita</h2></span>
+			<input type="checkbox" id="checkbox-X">
+				<label for="checkbox-X" class="xzinho">
+					<span></span>
+					<span></span>
+				</label>
+		</div>
+		<div class="caixa-conteudo">
+			<p> Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla</p>
+		</div>
+		</div>
+		<div class="pag-visu" id="docecoco" data-tab-content>
+		<div class="detalhes">
+			<span class="title"><img src="img/culinaria_online(favicon).png"><h2>Vamos ver o que precisa para essa receita</h2></span>
+			<input type="checkbox" id="checkbox-X">
+				<label for="checkbox-X" class="xzinho">
+					<span></span>
+					<span></span>
+				</label>
+		</div>
+		<div class="caixa-conteudo">
+			<p> Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla</p>
+		</div>
+		</div>
+		<div class="pag-visu" id="batatarecheada" data-tab-content>
+		<div class="detalhes">
+			<span class="title"><img src="img/culinaria_online(favicon).png"><h2>Vamos ver o que precisa para essa receita</h2></span>
+			<input type="checkbox" id="checkbox-X">
+				<label for="checkbox-X" class="xzinho">
+					<span></span>
+					<span></span>
+				</label>
+		</div>
+		<div class="caixa-conteudo">
+			<p> Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla</p>
+		</div>
+		</div>
+		<div class="pag-visu" id="brocolisgratinado" data-tab-content>
+		<div class="detalhes">
+			<span class="title"><img src="img/culinaria_online(favicon).png"><h2>Vamos ver o que precisa para essa receita</h2></span>
+			<input type="checkbox" id="checkbox-X">
+				<label for="checkbox-X" class="xzinho">
+					<span></span>
+					<span></span>
+				</label>
+		</div>
+		<div class="caixa-conteudo">
+			<p> Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla</p>
+		</div>
+		</div>
+		<div class="pag-visu" id="panquecarecheada" data-tab-content>
+		<div class="detalhes">
+			<span class="title"><img src="img/culinaria_online(favicon).png"><h2>Vamos ver o que precisa para essa receita</h2></span>
+			<input type="checkbox" id="checkbox-X">
+				<label for="checkbox-X" class="xzinho">
+					<span></span>
+					<span></span>
+				</label>
+		</div>
+		<div class="caixa-conteudo">
+			<p> Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla</p>
+		</div>
 		</div>
 	</section>
 
 	<footer>
 		<h1> Rodapé </h1>
-
 	</footer>
 	
+	<script>
+		function tipeWrite(elemento) {
+			const textArray = elemento.innerHTML.split('');
+			elemento.innerHTML = '';
+			textArray.forEach((letra, i) =>{
+			setTimeout(() => elemento.innerHTML += letra, 75 * i);
+			});
+		}
+
+		const titulo = document.querySelector('.content h2')
+		tipeWrite(titulo);
+
+		const tabs = document.querySelectorAll('[data-tab-target]')
+		const tabContents = document.querySelectorAll('[data-tab-content]')
+
+		tabs.forEach(tab => {
+			tab.addEventListener('click', () => {
+				const target = document.querySelector(tab.dataset.tabTarget)
+				tabContents.forEach(tabContent => {
+					tabContent.classList.remove('active')
+				})
+				target.classList.add('active')
+			})
+		})
+	</script>
 </body>
 </html>			

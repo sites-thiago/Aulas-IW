@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Culinária Online</title>
+  	<link rel="shortcut icon" href="img/culinaria_online(favicon).png">
+ 	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+	<header class="stick">
+		<nav class="menu-opcoes">
+			<h1><img src="img/culinaria_online(logo).png"></h1>
+			<input type="checkbox" id="checkbox-menu">
+			<label for="checkbox-menu" class="hamburguer">
+				<span></span>
+				<span></span>
+				<span></span>
+			</label>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="" class="ativado">Contato</a></li>
+			</ul>
+		</nav>
+	</header>
+
+		<div class="bannercontato">
+		<div class="content">
+			<h2 class="titulo">Formulário de contato</h2>
+			<p>Entre em contato conosco para tirar dúvidas e sugerir receitas</p>
+		</div>
+	</div>
+
+	<form>
+		<div>
+			<h2 id="titulorec">Complete com suas informações</h2>
+		</div>
+		<fieldset class="grupo">
+			<div class="campo">
+				<label for="nome"><strong>Nome</strong></label>
+				<input type="text" name="nome" id="nome" required>
+			</div>
+			<div class="campo">
+				<label for="sobrenome"><strong>Sobrenome</strong></label>
+				<input type="text" name="sobrenome" id="sobrenome"required>
+			</div>
+		</fieldset>
+
+		<div class="campo">
+			<label for="email"><strong>Endereço email</strong></label>
+			<input type="email" name="email" id="email" required>
+		</div>
+
+		<div class="campo">
+			<label><strong>Qual é o seu gênero?</strong></label>
+			<label>
+				<input type="radio" name="devweb" value="frontend" checked>Masculino
+			</label>
+			<label>
+				<input type="radio" name="devweb" value="backend">Feminino
+			</label>
+			<label>
+				<input type="radio" name="devweb" value="fullstack">Prefiro não dizer
+			</label>
+		</div>
+
+		<div class="campo">
+			<label for="onde"><strong>De onde você é?</strong></label>
+			<select id="onde">
+				<option selected disabled value="">Selecione</option>
+				<option>Acre</option>
+				<option>Alagoas</option>
+				<option>Amapá</option>
+				<option>Amazonas</option>
+				<option>Bahia</option>
+				<option>Ceará</option>
+				<option>Distrito Federal</option>
+				<option>Espírito Santo</option>
+				<option>Goiás</option>
+				<option>Maranhão</option>
+				<option>Mato Grosso</option>
+				<option>Mato Grosso do Sul</option>
+				<option>Minas Gerais</option>
+				<option>Pará</option>
+				<option>Paraíba</option>
+				<option>Paraná</option>
+				<option>Pernambuco</option>
+				<option>Piauí</option>
+				<option>Rio de Janeiro</option>
+				<option>Rio Grande do Norte</option>
+				<option>Rio Grande do Sul</option>
+				<option>Rondônia</option>
+				<option>Roraima</option>
+				<option>Santa Catarina</option>
+				<option>São Paulo</option>
+				<option>Sergipe</option>
+				<option>Tocantins</option>
+			</select>
+		</div>
+		<div class="campo">
+			<label><strong>Você tem experiência na cozinha?</strong></label>	
+			<label>
+				<input type="radio" name="devweb2" value="frontend" checked>Sim
+			</label>
+			<label>
+				<input type="radio" name="devweb2" value="backend">Não
+			</label>
+			<label>
+				<input type="radio" name="devweb2" value="fullstack">Nunca cozinhei
+			</label>
+		</div>
+		<fieldset class="grupo">
+			<div id="checkreceita">
+				<label><strong>Qual tipo de receitas você gosta?</strong></label><br><br>
+				<input type="checkbox" id="receitas1" name="receitas1" value="Bebidas" checked>
+				<label for="receitas1">Bebidas</label>
+				<input type="checkbox" id="receitas2" name="receitas2" value="Comidas">
+				<label for="receitas2">Comidas</label>
+				<input type="checkbox" id="receitas3" name="receitas3" value="Doces">
+				<label for="receitas3">Doces</label>
+				<input type="checkbox" id="receitas4" name="receitas4" value="Sobremesas">
+				<label for="receitas4">Sobremesas</label>
+				<input type="checkbox" id="receitas5" name="receitas5" value="Snacks">
+				<label for="receitas5">Snacks</label>
+				<input type="checkbox" id="receitas6" name="receitas6" value="Massas">
+				<label for="receitas6">Massas</label>
+				<input type="checkbox" id="receitas7" name="receitas7" value="Carnes">
+				<label for="receitas7">Carnes</label>
+				<input type="checkbox" id="receitas8" name="receitas8" value="Molhos">
+				<label for="receitas8">Molhos</label>
+			</div>
+		</fieldset>
+		<div class="campo">
+			<br>
+			<label><strong>Escreva aqui suas reclamações/ sugestões de receitas que gostaria de ver aqui:</strong></label>
+			<textarea row="6" style="width: 57%; height: auto;" id="sugestoes" name="sugestoes"></textarea>
+		</div>
+		<button type="submit" class="botao">Enviar</button>
+	</form>
+
+	<br>
+	<br>
+	<script>
+		function tipeWrite(elemento) {
+			const textArray = elemento.innerHTML.split('');
+			elemento.innerHTML = '';
+			textArray.forEach((letra, i) =>{
+			setTimeout(() => elemento.innerHTML += letra, 75 * i);
+			});
+		}
+
+		const titulo = document.querySelector('.content h2')
+		tipeWrite(titulo);
+	</script>
+</body>
+</html>
