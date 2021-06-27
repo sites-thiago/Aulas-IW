@@ -48,13 +48,19 @@
 		text-decoration: none;
 	}
 
-	nav a.ativado a:hover {
+	nav a:hover {
 		background: #E8F1F2;
 		color: #13293D;
 		transition: 0.5s;
 		border-radius: 5px;
 	}
 
+	nav .ativado {
+		background: #E8F1F2;
+		color: #13293D;
+		transition: 0.5s;
+		border-radius: 5px;
+	}
 
 	h1 {
 		position: relative;
@@ -434,7 +440,8 @@
 		position: fixed;
 		top: 50%;
 		left: 50%;
-		transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%) scale(0);
+		transition: 200ms ease-in-out;
 		background: #ffffff;
 		max-width: 700px;
 		width: 100%;
@@ -442,7 +449,29 @@
 		padding: 30px;
 		border-radius: 10px;
 		border: 3px solid #13293D;
-		box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+		box-shadow: 0px 0px 15px rgba(0,0,0,0.6);
+		z-index: 10;
+	}
+
+	.pag-visu.active {
+		transform: translate(-50%, -50%) scale(1);
+	}
+
+	#sombra {
+		position: fixed;
+		transition: 200ms ease-in-out;
+		opacity: 0;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba(0,0,0,0.5);
+		pointer-events: none;
+	}
+
+	#sombra.active {
+		opacity: 1;
+		pointer-events: all;
 	}
 
 	.pag-visu-scroll {
@@ -500,6 +529,10 @@
 	}
 
 	.conteudo h2 {
+		padding-top: 10px;
+	}
+
+	.conteudofim h2 {
 		padding-top: 10px;
 	}
 
